@@ -81,7 +81,7 @@ namespace FamilyParametersChanger
             runTitle01.FontSize = fontSizeBase;
             pTitle.Inlines.Add(runTitle01);
             Run runTitle02 = new Run();
-            runTitle02.Text = $"{filePathVM.Name} ({filePathVM.FileType})";
+            runTitle02.Text = $"{filePathVM.Name}";
             runTitle02.FontFamily = fontFamilyBase;
             runTitle02.FontWeight = FontWeights.Normal;
             runTitle02.FontSize = fontSizeBase;
@@ -264,6 +264,49 @@ namespace FamilyParametersChanger
             }
         }
 
-        
+        internal void AddHead(string inputString)
+        {
+            Paragraph pHead = new Paragraph();
+            pHead.Margin = left_0_padding_5;
+            Run run = new Run();
+            run.Text = inputString;
+            run.FontWeight = FontWeights.Bold;
+            run.FontSize = fontSizeHead;
+            run.FontFamily = fontFamilyBase;
+            pHead.Inlines.Add(run);
+            FlowDocument.Blocks.Add(pHead);
+        }
+        internal void AddParagraph(string inputString1, string pName, string inputString2)
+        {
+            Paragraph pBody = new Paragraph();
+            pBody.Margin = left_7;
+            Run run011 = new Run
+            {
+                Text = inputString1 + " ",
+                FontFamily = fontFamilyBase,
+                FontWeight = FontWeights.Normal,
+                FontSize = fontSizeBase
+            };
+            pBody.Inlines.Add(run011);
+            Run run012 = new Run()
+            {
+                Text = pName,
+                FontFamily = fontFamilyBase,
+                FontWeight = FontWeights.Bold,
+                FontSize = fontSizeBase
+            };
+            pBody.Inlines.Add(run012);
+            Run run013 = new Run
+            {
+                Text = " " + inputString2,
+                FontFamily = fontFamilyBase,
+                FontWeight = FontWeights.Normal,
+                FontSize = fontSizeBase
+            };
+            pBody.Inlines.Add(run013);
+            FlowDocument.Blocks.Add(pBody);
+        }
+
+
     }
 }

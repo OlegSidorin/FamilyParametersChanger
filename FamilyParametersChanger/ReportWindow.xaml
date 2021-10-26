@@ -32,15 +32,15 @@
         </Grid.ColumnDefinitions>
         <StackPanel Orientation="Horizontal" 
                     Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="7"
-                    Background="DarkSlateGray">
-            <Image Source="/FamilyParametersChanger;Component/res/m1logo.png"
-                   Height="20" Margin="5,0,0,0"/>
+                    Background="SlateGray">
+            <Image Source="/FamilyParametersChanger;Component/res/m1project-logo.png"
+                   Height="28" Margin="5,0,0,0"/>
             <TextBlock Text="ОТЧЕТ" VerticalAlignment="Center" 
                        FontSize="18" Foreground="WhiteSmoke"
-                       Margin="5,0,0,0"/>
+                       Margin="8,0,0,0"/>
         </StackPanel>
         <StackPanel Grid.Row="11" Grid.Column="0" VerticalAlignment="Center" 
-                    Grid.ColumnSpan="7" Background="DarkSlateGray"
+                    Grid.ColumnSpan="7" Background="SlateGray"
                     Height="40"
                     Orientation="Horizontal" >
         </StackPanel>
